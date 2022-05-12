@@ -1,5 +1,5 @@
 <template>
   <div>
-    123
+    <Introduce />
   </div>
 </template>

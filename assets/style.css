@@ -502,7 +502,7 @@ tbody tr:last-child td:last-of-type {
 }
 
 .navigation nav a.active {
-  color: var(--bright-font-color);
+  color: var(--primary);
 }
 
 .navigation nav a.brand {
@@ -691,6 +691,15 @@ article a:hover {
   color: var(--background-color);
   border-top: 2px solid var(--primary);
   border-bottom: 2px solid var(--primary);
+}
+article .tag {
+  padding: 0.25rem 1rem;
+  border-radius: 0.375rem;
+}
+
+article .tag:hover {
+  background: var(--navbar-color);
+  cursor: pointer;
 }
 
 article li a,

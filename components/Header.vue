@@ -16,7 +16,7 @@ const { config } = useConfig()
       </nav>
       <div>
         <nav>
-          <NuxtLink v-for="item in config.menu" :key="item.label" :to="item.url" active-class-name="active">
+          <NuxtLink v-for="item in config.menu" :key="item.label" :to="item.url" active-class="active">
             <img :src="item.icon" :alt="item.label">
             <div class="tooltip">
               {{ item.label }}
@@ -31,7 +31,7 @@ const { config } = useConfig()
           </a>
         </nav>
         <button v-if="config.enableThemeSwitch" class="theme-switcher" @click="switchTheme">
-          <img src="/moon.png" alt="Theme">
+          <img src="/images/moon.png" alt="Theme">
         </button>
       </div>
     </div>
