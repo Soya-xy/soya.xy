@@ -1,29 +1,22 @@
 <script setup>
+import '~/assets/style'
 useHead({
-  title: 'Vitesse Nuxt 3',
+  title: 'Soya',
   link: [
     {
       rel: 'icon', type: 'image/png', href: '/nuxt.png',
     },
   ],
 })
+
+const { theme } = useTheme()
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <Seo />
+  <div :class="theme">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
-
-<style>
-html, body , #__nuxt{
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-html.dark {
-  background: #222;
-  color: white;
-}
-</style>
