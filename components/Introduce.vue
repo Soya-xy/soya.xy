@@ -9,6 +9,81 @@ function clip(source: string) {
   copy()
   Message.success('复制成功！')
 }
+const edges = [{
+  isNew: 1,
+  date: new Date().getTime(),
+  title: 'Building a Musical Instrument with the Web Audio API',
+  tags: [
+    'svelte',
+    'web api',
+    'projects',
+  ],
+  categories: [
+    'Front End',
+  ],
+}, {
+  date: new Date().getTime(),
+  title: 'Building a Musical Instrument with the Web Audio API',
+  tags: [
+    'svelte',
+    'web api',
+    'projects',
+  ],
+  categories: [
+    'Front End',
+  ],
+}, {
+  date: new Date().getTime(),
+  title: 'Building a Musical Instrument with the Web Audio API',
+  tags: [
+    'svelte',
+    'web api',
+    'projects',
+  ],
+  categories: [
+    'Front End',
+  ],
+}]
+const highlighted = [{
+  isNew: 1,
+  date: new Date().getTime(),
+  thumbnail: '/images/vue.png',
+  title: 'Building a Musical Instrument with the Web Audio API',
+  tags: [
+    'svelte',
+    'web api',
+    'projects',
+  ],
+  categories: [
+    'Front End',
+  ],
+}, {
+  date: new Date().getTime(),
+  thumbnail: '/images/vue.png',
+
+  title: 'Building a Musical Instrument with the Web Audio API',
+  tags: [
+    'svelte',
+    'web api',
+    'projects',
+  ],
+  categories: [
+    'Front End',
+  ],
+}, {
+  date: new Date().getTime(),
+  thumbnail: '/images/vue.png',
+
+  title: 'Building a Musical Instrument with the Web Audio API',
+  tags: [
+    'svelte',
+    'web api',
+    'projects',
+  ],
+  categories: [
+    'Front End',
+  ],
+}]
 </script>
 
 <template>
@@ -55,7 +130,7 @@ function clip(source: string) {
           View All
         </NuxtLink>
       </h2>
-      <!-- <Posts data="{simplifiedLatest}" /> -->
+      <Posts v-for="item, index in edges" :key="index" :node="item" :is-new="item.isNew" />
 
       <h2 class="main-header">
         <span>Highlights</span>
@@ -63,7 +138,7 @@ function clip(source: string) {
           View All
         </NuxtLink>
       </h2>
-      <!-- <Posts data="{simplifiedHighlights}" year-only /> -->
+      <Posts v-for="item, index in highlighted" :key="index" :node="item" year-only />
 
       <h2 class="main-header">
         Contact

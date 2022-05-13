@@ -189,7 +189,7 @@ pre.language-terminal::before {
   color: rgba(245, 250, 255, 0.3);
 }
 
-.gatsby-highlight {
+.nuxt-highlight {
   font-size: 0.9rem;
   overflow-y: hidden;
   overflow-x: auto;
@@ -200,14 +200,14 @@ pre.language-terminal::before {
   max-width: 999999px;
 }
 
-.gatsby-highlight pre[class*='language-'] {
+.nuxt-highlight pre[class*='language-'] {
   float: left;
   margin-top: 0;
   margin-bottom: 0;
   min-width: 100%;
 }
 
-.gatsby-highlight-code-line {
+.nuxt-highlight-code-line {
   background-color: #24272e;
   display: block;
   margin-left: -1.25rem;

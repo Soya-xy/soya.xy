@@ -636,7 +636,18 @@ article .description {
 }
 
 .post-image {
+  overflow: hidden;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
   margin-bottom: 1rem;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .post-details {
@@ -939,6 +950,54 @@ a.post time {
 }
 
 /* Helpers */
+
+.post-content :is(h1, h2, h3, h4, h5, h6) {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  transform: translateX(-20px);
+}
+
+.post-content :is(menu,  ul) {
+  list-style: disc;
+}
+
+.post-content ol{
+  list-style: auto;
+}
+
+.anchor.before {
+  padding-right: 4px;
+}
+
+.anchor.after {
+  display: inline-block;
+  padding-left: 4px;
+}
+
+h1 .anchor svg,
+h2 .anchor svg,
+h3 .anchor svg,
+h4 .anchor svg,
+h5 .anchor svg,
+h6 .anchor svg {
+  visibility: hidden;
+}
+h1:hover .anchor svg,
+h2:hover .anchor svg,
+h3:hover .anchor svg,
+h4:hover .anchor svg,
+h5:hover .anchor svg,
+h6:hover .anchor svg,
+h1 .anchor:focus svg,
+h2 .anchor:focus svg,
+h3 .anchor:focus svg,
+h4 .anchor:focus svg,
+h5 .anchor:focus svg,
+h6 .anchor:focus svg {
+  visibility: visible;
+}
 
 a.anchor.before {
   border: none;
@@ -1290,6 +1349,13 @@ main {
   .post-image {
     max-width: 75px;
     max-height: 75px;
+  }
+
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .main-image {

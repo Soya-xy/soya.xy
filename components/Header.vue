@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-const { switchTheme } = useTheme()
 const { config } = useConfig()
 </script>
 
@@ -30,9 +29,7 @@ const { config } = useConfig()
             <img :src="item.icon" :alt="item.label">
           </a>
         </nav>
-        <button v-if="config.enableThemeSwitch" class="theme-switcher" @click="switchTheme">
-          <img src="/images/moon.png" alt="Theme">
-        </button>
+        <ToggleTheme />
       </div>
     </div>
   </header>

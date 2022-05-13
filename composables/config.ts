@@ -1,6 +1,6 @@
 export function useConfig() {
   const config = useState('config', () => ({
-    // 站点地址
+    // seo
     siteUrl: 'https://localhost',
     siteLogo: '/images/logo.jpeg',
     github: 'https://github.com/Soya-xy',
@@ -9,6 +9,7 @@ export function useConfig() {
     article: '1',
     summary: '1',
     schemaOrgJSONLD: {},
+    author: 'Soya',
     // 标题
     title: 'Soya',
     // 菜单
