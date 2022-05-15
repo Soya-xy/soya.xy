@@ -16,11 +16,11 @@ export function useConfig() {
     menu: [{
       label: 'Articles',
       icon: '/images/nav-blog.png',
-      url: '',
+      url: 'articles',
     }, {
       label: 'Projects',
       icon: '/images/nav-blog.png',
-      url: '',
+      url: 'projects',
     }, {
       label: 'About me',
       icon: '/images/nav-blog.png',

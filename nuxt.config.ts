@@ -12,10 +12,12 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '~/modules/markdown',
   ],
+  target: 'static',
   experimental: {
     reactivityTransform: true,
     viteNode: true,
   },
+  // 暂时抛去markdown 使用组件的能力  nuxt issue 4834
   components: {
     // 解决vite-plugin-md wrapperComponent 获取 nuxt 组件未注册
     global: true,

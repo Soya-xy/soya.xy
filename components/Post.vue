@@ -1,22 +1,27 @@
 <script setup lang='ts'>
 import { postDate } from '~/composables/date'
 
-const post: any = {
-  id: 1,
-  title: 'Hello World',
-  thumbnail: '/images/graphql.png',
-  content: 'This is the post content',
-  tags: ['vue', 'typescript'],
-  date: new Date(),
-  html: '',
+interface Post {
+  title?: string
+  thumbnail?: string
+  content?: string
+  tags?: string[]
+  date?: Date
+  html?: string
 }
+
+const post = withDefaults(defineProps<Post>(), {
+  title: '',
+  thumbnail: '',
+  content: '',
+  html: '',
+})
 
 const { config } = useConfig()
 </script>
 
 <template>
   <div>
-    <Seo />
     <article>
       <header>
         <div class="container">

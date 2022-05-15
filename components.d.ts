@@ -5,7 +5,11 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AAlert: typeof import('@arco-design/web-vue')['Alert']
     AButton: typeof import('@arco-design/web-vue')['Button']
+    ADrawer: typeof import('@arco-design/web-vue')['Drawer']
+    AProgress: typeof import('@arco-design/web-vue')['Progress']
+    ASpin: typeof import('@arco-design/web-vue')['Spin']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
