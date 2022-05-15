@@ -15,13 +15,17 @@ fg.sync('pages/posts/**/*.{md,vue}')
   .sort((a, b) => {
     const at = fs.statSync(a)
     const bt = fs.statSync(b)
-    return at.birthtime > bt.birthtime ? -1 : 1
+    return at.ctime > bt.ctime ? -1 : 1
   }).forEach((file) => {
     const item = fs.statSync(file)
+    const highlight = fs.readFileSync(file, 'utf8').toString().search('highlighted: true')
+    const thumbnail = fs.readFileSync(file, 'utf8').toString().match(/thumbnail:(.*)/)?.[1]
     const ext = parse(file).ext
-    const year = item.birthtime.getFullYear().toString()
+    const year = item.ctime.getFullYear().toString()
     const v = {
       type: 'post',
+      thumbnail,
+      highlight: highlight > -1,
       name: basename(file, ext),
       title: basename(file, ext),
       date: item.ctime,
@@ -45,6 +49,6 @@ const code = genArrayFromRaw((menu.map((v) => {
 })))
 
 writeFileSync('data/guides.ts',
-`import type { Menu } from '~/assets/type/menu'
-export const menuList: Menu[] = ${code}
+`import type { MenuList } from '~/assets/type/menu'
+export const menuList: MenuList[] = ${code}
 `, 'utf-8')

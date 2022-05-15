@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: true,
   },
-  // 暂时抛去markdown 使用组件的能力  nuxt issue 4834
+  // 暂时解决markdown 使用组件的能力  nuxt issue 4834 同时失去arco
   components: {
     // 解决vite-plugin-md wrapperComponent 获取 nuxt 组件未注册
     global: true,

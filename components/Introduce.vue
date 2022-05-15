@@ -1,6 +1,8 @@
 <script setup lang='ts'>
 import { Message } from '@arco-design/web-vue'
 import type GitHub from '~/assets/type/github'
+import { menuList } from '~/data/guides'
+import type { Item } from '~/assets/type/menu'
 const { config } = useConfig()
 const { data } = await useFetch<GitHub>('https://api.github.com/users/Soya-xy')
 
@@ -9,81 +11,13 @@ function clip(source: string) {
   copy()
   Message.success('复制成功！')
 }
-const edges = [{
-  isNew: 1,
-  date: new Date().getTime(),
-  title: 'Building a Musical Instrument with the Web Audio API',
-  tags: [
-    'svelte',
-    'web api',
-    'projects',
-  ],
-  categories: [
-    'Front End',
-  ],
-}, {
-  date: new Date().getTime(),
-  title: 'Building a Musical Instrument with the Web Audio API',
-  tags: [
-    'svelte',
-    'web api',
-    'projects',
-  ],
-  categories: [
-    'Front End',
-  ],
-}, {
-  date: new Date().getTime(),
-  title: 'Building a Musical Instrument with the Web Audio API',
-  tags: [
-    'svelte',
-    'web api',
-    'projects',
-  ],
-  categories: [
-    'Front End',
-  ],
-}]
-const highlighted = [{
-  isNew: 1,
-  date: new Date().getTime(),
-  thumbnail: '/images/vue.png',
-  title: 'Building a Musical Instrument with the Web Audio API',
-  tags: [
-    'svelte',
-    'web api',
-    'projects',
-  ],
-  categories: [
-    'Front End',
-  ],
-}, {
-  date: new Date().getTime(),
-  thumbnail: '/images/vue.png',
+const edges = menuList[0].list.filter((item, index) => index <= config.value.latestNum)
 
-  title: 'Building a Musical Instrument with the Web Audio API',
-  tags: [
-    'svelte',
-    'web api',
-    'projects',
-  ],
-  categories: [
-    'Front End',
-  ],
-}, {
-  date: new Date().getTime(),
-  thumbnail: '/images/vue.png',
-
-  title: 'Building a Musical Instrument with the Web Audio API',
-  tags: [
-    'svelte',
-    'web api',
-    'projects',
-  ],
-  categories: [
-    'Front End',
-  ],
-}]
+const highlighted = $ref<Item[]>([])
+menuList[0].list.forEach((item) => {
+  if (item.highlight && highlighted.length <= config.value.highlightNum)
+    highlighted.push(item)
+})
 </script>
 
 <template>
@@ -108,7 +42,7 @@ const highlighted = [{
           <img :src="config.siteLogo" alt="Web Logo" class="main-image">
         </div>
         <p class="hero-buttons">
-          <NuxtLink to="/me" class="hero-button">
+          <NuxtLink to="/about" class="hero-button">
             <img src="/images/nav-floppy.png" alt="Me">
             More about me
           </NuxtLink>
@@ -130,15 +64,14 @@ const highlighted = [{
           View All
         </NuxtLink>
       </h2>
-      <Posts v-for="item, index in edges" :key="index" :node="item" :is-new="item.isNew" />
-
+      <Posts v-for="item, index in edges" :key="index" :node="item" :is-new="index === 0" />
       <h2 class="main-header">
         <span>Highlights</span>
         <NuxtLink to="/blog">
           View All
         </NuxtLink>
       </h2>
-      <Posts v-for="item, index in highlighted" :key="index" :node="item" year-only />
+      <Posts v-for="item, index in highlighted" :key="index" :node="item" year-only show-thumbnail />
 
       <h2 class="main-header">
         Contact

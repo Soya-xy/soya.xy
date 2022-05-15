@@ -10,35 +10,39 @@ export function useConfig() {
     summary: '1',
     schemaOrgJSONLD: {},
     author: 'Soya',
-    // 标题
     title: 'Soya',
-    // 菜单
+    // headerMenu
     menu: [{
       label: 'Articles',
       icon: '/images/nav-blog.png',
-      url: 'articles',
+      url: '/articles',
     }, {
       label: 'Projects',
-      icon: '/images/nav-blog.png',
-      url: 'projects',
+      icon: '/images/nav-dos.png',
+      url: '/projects',
     }, {
       label: 'About me',
-      icon: '/images/nav-blog.png',
-      url: 'about',
+      icon: '/images/nav-floppy.png',
+      url: '/about',
     }],
-    // 右侧社交菜单
+    // rightMenu
     socialMenu: [
       {
-        label: '文章',
-        icon: '/images/nav-blog.png',
-        url: '',
+        label: 'Twitter',
+        icon: '/images/nav-twitter.png',
+        url: 'https://twitter.com/SoyaXyo',
       }, {
-        icon: '/images/nav-blog.png',
-        url: '',
+        label: 'Github',
+        icon: '/images/nav-github.png',
+        url: 'https://github.com/Soya-xy',
       },
     ],
-    // 是否开启主题色切换
+    // Whether to enable theme color switch
     enableThemeSwitch: true,
+    // Number of latest articles on home page
+    latestNum: 10,
+    // Number of highlight articles on article page
+    highlightNum: 10,
   }))
 
   return {

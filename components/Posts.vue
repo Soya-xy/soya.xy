@@ -1,9 +1,10 @@
 <script setup lang='ts'>
 import { formatDate, postDate } from '~/composables/date'
 
-const { yearOnly = false, node = {}, isNew = 0, matches = [], timeType = '' } = defineProps<{
+const { yearOnly = false, node = {}, isNew = false, showThumbnail = false, matches = [], timeType = '' } = defineProps<{
   yearOnly?: boolean
-  isNew?: number
+  isNew?: boolean
+  showThumbnail?: boolean
   matches?: number[][]
   node?: Record<string, any>
   timeType?: string
@@ -41,17 +42,16 @@ if (matches.length > 0) {
       <div class="posts">
         <NuxtLink :key="node.title" :to="`/posts/${node.title}`" :class="isNew ? 'post new' : 'post'">
           <span class="flex" :style="{ alignItems: 'center' }">
-            <img v-if="node.thumbnail" :src="node.thumbnail" w6 mr4 loading="lazy">
+            <img v-if="node.thumbnail && showThumbnail" :src="node.thumbnail" w6 mr4 loading="lazy">
             <template v-if="title">
               <h3 v-html="title" />
-              <!-- {{ node.title.slice(0, highlightStart) }}<strong class="highlighted">{{ node.title.slice(highlightStart, highlightEnd) }}</strong>{{ node.title.slice(highlightEnd, node.title.length) }} -->
             </template>
             <h3 v-else>{{ node.title }}</h3>
             <span v-if="isNew" class="new-badge"> New!</span>
           </span>
           <div>
-            <time>{{ timeType === 'post' ? postDate(node.date, false) : formatDate(node.date, yearOnly ? 'YYYY'
-              : undefined)
+            <time>{{
+              timeType === 'post' ? postDate(node.date, false) : formatDate(node.date, yearOnly ? 'YYYY' : undefined)
             }}</time>
           </div>
         </NuxtLink>

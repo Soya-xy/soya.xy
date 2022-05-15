@@ -2,6 +2,8 @@ export interface Item {
   type: string
   name: string
   title: string
+  highlight: boolean
+  thumbnail: string | undefined
   date: Date | string
   birthtime: Date | string
 }

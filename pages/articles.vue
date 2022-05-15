@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import { isSearching, query, searchResult } from '~/composables/search'
+import { menuList } from '~/data/guides'
 </script>
 
 <template>
@@ -39,6 +40,18 @@ import { isSearching, query, searchResult } from '~/composables/search'
               <p v-else-if="!isSearching" mt8>
                 Sorry, nothing matched that search.
               </p>
+            </template>
+            <template v-else>
+              <template v-for="v in menuList" :key="v.title">
+                <h2 class="main-header">
+                  <span>{{ v.year }}</span>
+                </h2>
+                <Posts
+                  v-for="item in v.list" :key="item.name"
+                  :node="item"
+                  time-type="post"
+                />
+              </template>
             </template>
           </section>
         </div>

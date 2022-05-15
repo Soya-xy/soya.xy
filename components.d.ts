@@ -10,6 +10,8 @@ declare module '@vue/runtime-core' {
     ADrawer: typeof import('@arco-design/web-vue')['Drawer']
     AProgress: typeof import('@arco-design/web-vue')['Progress']
     ASpin: typeof import('@arco-design/web-vue')['Spin']
+    ATooltip: typeof import('@arco-design/web-vue')['Tooltip']
+    NButton: typeof import('naive-ui')['NButton']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
