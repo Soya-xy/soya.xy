@@ -5,7 +5,8 @@
     "dev": "esno scripts/prepare.ts && nuxi dev",
     "preview": "nuxi preview",
     "start": "esno .output/server/index.mjs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "np": "ga . && gcm 'new post' && gp"
   },
   "dependencies": {
     "fuse.js": "^6.6.2",

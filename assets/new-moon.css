@@ -25,6 +25,12 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  max-width: 999999px;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+
   color: var(--code-font-color);
   font-family: var(--code-font-family);
   font-size: 0.9rem !important;
