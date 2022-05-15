@@ -5,20 +5,11 @@ export const menuList: MenuList[] = [
     list: [
   {
     type: "post",
-    thumbnail: undefined,
-    highlight: false,
-    name: "Vue Class的显示",
-    title: "Vue Class的显示",
-    date: "2022-05-15T14:02:21.917Z",
-    birthtime: "2022-05-15T11:20:41.056Z"
-  },
-  {
-    type: "post",
-    thumbnail: " /images/github.png",
+    thumbnail: " /images/nav-github.png",
     highlight: true,
     name: "New Blog",
     title: "New Blog",
-    date: "2022-05-15T14:02:18.161Z",
+    date: "2022-05-15T14:55:59.877Z",
     birthtime: "2022-05-15T11:33:45.202Z"
   },
   {
@@ -27,8 +18,17 @@ export const menuList: MenuList[] = [
     highlight: false,
     name: "JavaScript 监听截图",
     title: "JavaScript 监听截图",
-    date: "2022-05-15T14:02:14.022Z",
+    date: "2022-05-15T14:03:16.059Z",
     birthtime: "2022-05-15T11:17:01.450Z"
+  },
+  {
+    type: "post",
+    thumbnail: undefined,
+    highlight: false,
+    name: "Vue Class的显示",
+    title: "Vue Class的显示",
+    date: "2022-05-15T14:02:21.917Z",
+    birthtime: "2022-05-15T11:20:41.056Z"
   },
   {
     type: "post",

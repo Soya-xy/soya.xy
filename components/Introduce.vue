@@ -72,7 +72,6 @@ menuList[0].list.forEach((item) => {
         </NuxtLink>
       </h2>
       <Posts v-for="item, index in highlighted" :key="index" :node="item" year-only show-thumbnail />
-
       <h2 class="main-header">
         Contact
       </h2>
