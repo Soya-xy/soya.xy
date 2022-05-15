@@ -1,80 +1,68 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
-</p>
+# [xiaoyio.com](https://xiaoyio.com)
 
-<h2 align="center">
-<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
-</h2><br>
+Nuxt3 Blog based on [Vitesse-Nuxt3](https://github.com/antfu/vitesse-nuxt3) template, using [Taniarascia](https://www.taniarascia.com/)`s Blog style theme
 
-<pre align="center">
-🧪 Working in Progress
-</pre>
+## Feature
+- [Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
+- [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
+- [Vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown for Vite
+- [Fuse.js](https://fusejs.io/) - Fuse.js is a powerful, lightweight fuzzy-search library, with zero dependencies.
+- [Vueuse](https://vueuse.org/) - Collection of essential Vue Composition Utilities
 
-<p align="center">
-<br>
-<a href="https://vitesse-nuxt3.netlify.app/">🖥 Online Preview</a>
-<br><br>
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-</p>
+# Try it
 
-## Features
+## Usage
+You can do this by creating an '.md 'file in the' page/posts' directory called the article title, and then writing the article content to the file to display it on the page.
 
-- [💚 Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
+Write headers at the top of the file to define the article parameters, following the 'YAML' format as follows:
+```md
+---
+title: Articles `s Title
+date: Articles `s Date
+duration: How long did it take to write this article
+author: Your/Other name
+thumbnail: Articles `s Thumbnail and Logo
+highlighted: Whether it is specially displayed on the home page
+tags: string[]  Articles `s tag / keywords / categories
+---
+```
 
-- ⚡️ Vite - Instant HMR
+## Config
 
-- 🎨 [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
+在`composables/config.ts`文件里面你可以配置一些默认的参数，例如：
+```ts
 
-- 😃 Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/antfu/unocss)
+interface Item {
+  label: string
+  icon: string
+  url: string
+}
 
-- 🔥 The `<script setup>` syntax
 
-- 🍍 [State Management via Pinia](https://pinia.esm.dev), see [./composables/user.ts](./composables/user.ts)
+siteUrl: string
+siteLogo: string
 
-- 📑 [Layout system](./layouts)
+// SEO These parameters will be generated in the of each page 
+// Specific please see: components/Seo.vue
+github:string
+description: string
+image: string
+article: string
+summary: string
+schemaOrgJSONLD: SchemaObject
 
-- 📥 APIs auto importing - for Composition API, VueUse and custom composables.
+// Article 
+author: string // The author of the article
+title: string // This is the default title if the article does not declare a title
 
-- 🏎 Zero-config cloud functions and deploy
-
-- 🦾 TypeScript, of course
-
-## Plugins
-
-### Nuxt Modules
-
-- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs.
-- [ColorMode](https://github.com/nuxt-community/color-mode-module) - dark and Light mode with auto detection made easy with Nuxt.
-- [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine.
-- [Pinia](https://pinia.esm.dev/) - intuitive, type safe, light and flexible Store for Vue.
-
-## IDE
-
-We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable Vetur if you have it).
-
-## Variations
-
-- [vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
-- [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
-- [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
-- [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
-
-## Try it now!
-
-### Online
-
-<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-
-### GitHub Template
-
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt3/generate).
-
-### Clone to local
-
-If you prefer to do it manually with the cleaner git history
-
-```bash
-npx degit antfu/vitesse-nuxt3 my-nuxt3-app
-cd my-nuxt3-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+// headerMenu 
+menu: Item[],
+// rightMenu eg: Github, Twitter, Facebook...
+socialMenu: Item[],
+// Whether to enable theme color switch
+enableThemeSwitch: true,
+// Number of latest articles on home page
+latestNum: 10,
+// Number of highlight articles on article page
+highlightNum: 10,
 ```

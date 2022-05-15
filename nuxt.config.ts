@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',
-    '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '~/modules/markdown',
   ],
@@ -17,7 +16,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: true,
   },
-  // 暂时解决markdown 使用组件的能力  nuxt issue 4834 同时失去arco
+  // 暂时解决markdown 使用组件的能力  nuxt issue 4834 同时失去arco 暂时找不到解决方案
   components: {
     // 解决vite-plugin-md wrapperComponent 获取 nuxt 组件未注册
     global: true,
