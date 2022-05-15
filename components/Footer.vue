@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 const links = [
-  { url: 'https://taniarascia.substack.com/subscribe', label: 'Newsletter' },
+  { url: 'https://iobiji.com/', label: 'iobiji' },
 ]
 const madeWithLinks = [
   { url: 'https://v3.nuxtjs.org/', label: 'Next3', icon: '/images/nuxt.png' },

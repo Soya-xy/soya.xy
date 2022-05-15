@@ -14,6 +14,7 @@ config.schemaOrgJSONLD && useHead({
   <Html lang="zh">
     <Head>
       <Title>{{ config.title }}</Title>
+      <Meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
       <Meta name="description" :content="config.description" />
       <Meta name="image" :content="config.image" />
       <Meta property="og:url" :content="postSEO ? postURL : config.siteUrl" />
