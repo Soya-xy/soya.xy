@@ -15,7 +15,7 @@ const madeWithLinks = [
       <section>
         <nav>
           <span class="desktop-only">Made by Soya</span>
-          <span class="desktop-only">Theme By Tania Rascia</span>
+          <a class="desktop-only !text-#eee" href="https://www.taniarascia.com/" target="_blank">Theme By Tania Rascia</a>
         </nav>
         <nav>
           <span class="desktop-only">Links:</span>

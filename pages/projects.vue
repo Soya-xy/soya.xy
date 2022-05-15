@@ -1,36 +1,8 @@
 <script setup lang='ts'>
 import type { Repo } from '~/assets/type/github'
+import { projectsList } from '~/data/projectsList'
 const { config } = useConfig()
-interface ProjectsList {
-  name: string
-  repoName: string
-  tagline: string
-  image: string
-  url: string
-  writeup?: string
-  description?: string
-}
-
-const projectsList: ProjectsList[] = [
-  {
-    name: 'Soya',
-    repoName: 'Soya.xy',
-    tagline: 'The source of this website.',
-    image: '/images/nuxt.png',
-    url: 'https://xiaoyio.com',
-    writeup: '',
-    description: `I built this app because I wanted a simpler, IDE-like, WYSIWYG-free
-    note-taking program that would be accessible from any platform via
-    the web. I also wanted it to sync without creating users or
-    requiring a database.
-    The app allows plain text or markdown with previews, syncing,
-    internal wiki style note-linking, drag-and-drop, prettier, syntax
-    highlighting, light/dark mode, search, categorizing, and more!`,
-  },
-
-]
-
-const { data } = await useFetch<Repo[]>(`https://api.github.com/users/${config.value.github.split('/')[3]}/repos?per_page=100`)
+const { data } = await useFetch<Repo[]>(`https://api.github.com/users/${config.value.github.split('/')[3]}/repos`)
 </script>
 
 <template>

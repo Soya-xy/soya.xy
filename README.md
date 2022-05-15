@@ -2,6 +2,12 @@
 
 Nuxt3 Blog based on [Vitesse-Nuxt3](https://github.com/antfu/vitesse-nuxt3) template, using [Taniarascia](https://www.taniarascia.com/)`s Blog style theme
 
+## TODO
+- [ ] Add Menu
+- [ ] Add ToolTip
+- [ ] Add go back to the top
+
+
 ## Feature
 - [Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
 - [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
@@ -31,38 +37,38 @@ tags: string[]  Articles `s tag / keywords / categories
 
 In the 'composables/config.ts' file you can configure some default parameters, such as:
 ```ts
-
 interface Item {
   label: string
   icon: string
   url: string
 }
 
+interface WebConfig {
+  siteUrl: string
+  siteLogo: string
 
-siteUrl: string
-siteLogo: string
+  // SEO These parameters will be generated in the of each page
+  // Specific please see: components/Seo.vue
+  github: string
+  description: string
+  image: string
+  article: string
+  summary: string
+  schemaOrgJSONLD: SchemaObject
 
-// SEO These parameters will be generated in the of each page 
-// Specific please see: components/Seo.vue
-github:string
-description: string
-image: string
-article: string
-summary: string
-schemaOrgJSONLD: SchemaObject
+  // Article
+  author: string // The author of the article
+  title: string // This is the default title if the article does not declare a title
 
-// Article 
-author: string // The author of the article
-title: string // This is the default title if the article does not declare a title
-
-// headerMenu 
-menu: Item[],
-// rightMenu eg: Github, Twitter, Facebook...
-socialMenu: Item[],
-// Whether to enable theme color switch
-enableThemeSwitch: true,
-// Number of latest articles on home page
-latestNum: 10,
-// Number of highlight articles on article page
-highlightNum: 10,
+  // headerMenu
+  menu: Item
+  // rightMenu eg: Github, Twitter, Facebook...
+  socialMenu: Item[]
+  // Whether to enable theme color switch
+  enableThemeSwitch: true
+  // Number of latest articles on home page
+  latestNum: 10
+  // Number of highlight articles on article page
+  highlightNum: 10
+}
 ```
