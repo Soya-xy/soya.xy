@@ -29,7 +29,7 @@ tags: string[]  Articles `s tag / keywords / categories
 
 ## Config
 
-在`composables/config.ts`文件里面你可以配置一些默认的参数，例如：
+In the 'composables/config.ts' file you can configure some default parameters, such as:
 ```ts
 
 interface Item {
