@@ -2,7 +2,7 @@
 title: New Blog
 date: 2022-05-15 19:34
 tags: ['post', 'note-taking']
-thumbnail: /images/github.png
+thumbnail: /images/nav-github.png
 highlighted: true
 ---
 
