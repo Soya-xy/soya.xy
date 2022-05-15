@@ -40,7 +40,7 @@ if (matches.length > 0) {
   <div>
     <section>
       <div class="posts">
-        <NuxtLink :key="node.title" :to="`/posts/${node.title}`" :class="isNew ? 'post new' : 'post'">
+        <NuxtLink :key="node.title" :to="`/posts/${encodeURIComponent(node.title)}`" :class="isNew ? 'post new' : 'post'">
           <span class="flex" :style="{ alignItems: 'center' }">
             <img v-if="node.thumbnail && showThumbnail" :src="node.thumbnail" w6 mr4 loading="lazy">
             <template v-if="title">

@@ -28,7 +28,6 @@ export default defineNuxtModule({
               token.attrSet('class', 'language-text')
               return defaultRender(tokens, idx, options, env, self)
             }
-
             md.use(Prism)
             md.use(markdownItAttrs)
             md.use(LinkAttributes, {

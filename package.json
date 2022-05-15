@@ -33,7 +33,6 @@
     "markdown-it-link-attributes": "^4.0.0",
     "markdown-it-prism": "^2.2.3",
     "markdown-it-table-of-contents": "^0.6.0",
-    "naive-ui": "^2.28.4",
     "nuxt": "^3.0.0-rc.3",
     "nuxt-tsconfig-stub": "^0.0.2",
     "prismjs": "^1.27.0",

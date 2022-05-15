@@ -6,7 +6,7 @@ Nuxt3 Blog based on [Vitesse-Nuxt3](https://github.com/antfu/vitesse-nuxt3) temp
 - [ ] Add Menu
 - [ ] Add ToolTip
 - [ ] Add go back to the top
-
+- [ ] Add Comment ('Consider adding GraphQL')
 
 ## Feature
 - [Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
