@@ -6,6 +6,24 @@ export const menuList: MenuList[] = [
   {
     type: "post",
     thumbnail: " /images/nav-github.png",
+    highlight: false,
+    name: "Github WebHook Pm2 自动构建",
+    title: "Github WebHook Pm2 自动构建",
+    date: "2022-05-16T10:15:55.907Z",
+    birthtime: "2022-05-16T10:06:06.557Z"
+  },
+  {
+    type: "post",
+    thumbnail: undefined,
+    highlight: false,
+    name: "Test github webHook",
+    title: "Test github webHook",
+    date: "2022-05-16T09:55:27.604Z",
+    birthtime: "2022-05-16T01:33:24.222Z"
+  },
+  {
+    type: "post",
+    thumbnail: " /images/nav-github.png",
     highlight: true,
     name: "New Blog",
     title: "New Blog",
