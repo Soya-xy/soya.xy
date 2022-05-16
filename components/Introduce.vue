@@ -60,14 +60,14 @@ menuList[0].list.forEach((item) => {
     <div class="container">
       <h2 class="main-header">
         <span>Latest Articles</span>
-        <NuxtLink to="/blog">
+        <NuxtLink to="/articles">
           View All
         </NuxtLink>
       </h2>
       <Posts v-for="item, index in edges" :key="index" :node="item" :is-new="index === 0" />
       <h2 class="main-header">
         <span>Highlights</span>
-        <NuxtLink to="/blog">
+        <NuxtLink to="/articles">
           View All
         </NuxtLink>
       </h2>
