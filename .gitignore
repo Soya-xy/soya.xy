@@ -4,6 +4,7 @@ dist
 .output
 .nuxt
 .env
+.htaccess
 
 # Local Netlify folder
 .netlify
