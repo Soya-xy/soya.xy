@@ -20,6 +20,7 @@ fg.sync('pages/posts/**/*.{md,vue}')
     const item = fs.statSync(file)
     const highlight = fs.readFileSync(file, 'utf8').toString().search('highlighted: true')
     const thumbnail = fs.readFileSync(file, 'utf8').toString().match(/thumbnail:(.*)/)?.[1]
+    const date = fs.readFileSync(file, 'utf8').toString().match(/date:(.*)/)?.[1]
     const ext = parse(file).ext
     const year = item.ctime.getFullYear().toString()
     const v = {
@@ -28,7 +29,7 @@ fg.sync('pages/posts/**/*.{md,vue}')
       highlight: highlight > -1,
       name: basename(file, ext),
       title: basename(file, ext),
-      date: item.ctime,
+      date: date || item.ctime,
       birthtime: item.birthtime,
     }
     const index = find(pathEq(['year'], year))(menu)
@@ -47,6 +48,8 @@ const code = genArrayFromRaw((menu.map((v) => {
   v.list = genArrayFromRaw((v.list as Item[]).map(r => objectMap(r, (k, v) => [k, JSON.stringify(v)])))
   return v
 })))
+
+console.log(code)
 
 writeFileSync('data/guides.ts',
 `import type { MenuList } from '~/assets/type/menu'
