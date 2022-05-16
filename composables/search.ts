@@ -1,4 +1,4 @@
-import Fuse from 'fuse.js/dist/fuse'
+import Fuse from 'fuse.js'
 import { menuList } from '~/data/guides'
 import type { Menu, SearchResult } from '~/assets/type/menu'
 
