@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxi build",
+    "build": "esno scripts/prepare.ts && nuxi build",
     "dev": "esno scripts/prepare.ts && nuxi dev",
     "preview": "nuxi preview",
     "start": "esno .output/server/index.mjs",
