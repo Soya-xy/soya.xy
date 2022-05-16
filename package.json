@@ -6,7 +6,7 @@
     "preview": "nuxi preview",
     "start": "esno .output/server/index.mjs",
     "lint": "eslint .",
-    "np": "git add . && git commit -m'new post' && gp"
+    "np": "git add . && git commit -m'new post' && git push"
   },
   "dependencies": {
     "fuse.js": "^6.6.2",
