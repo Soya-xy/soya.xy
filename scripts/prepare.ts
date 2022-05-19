@@ -49,9 +49,10 @@ const code = genArrayFromRaw((menu.map((v) => {
   return v
 })))
 
-console.log(code)
-
 writeFileSync('data/guides.ts',
 `import type { MenuList } from '~/assets/type/menu'
 export const menuList: MenuList[] = ${code}
 `, 'utf-8')
+
+console.log('write Over!')
+

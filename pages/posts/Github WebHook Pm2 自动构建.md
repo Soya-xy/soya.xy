@@ -92,7 +92,7 @@ function RunCmd(cmd, args, cb) {
 
 http
   .createServer((req, res) => {
-    handler(req, res, (err) => {
+    handler(req, res, () => {
       res.statusCode = 404
       res.end('no such location')
     })
