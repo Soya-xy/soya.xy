@@ -10,6 +10,7 @@ tags: ['git', 'nuxt3', 'hook']
 利用`Github WebHook`可以实现 push 提交自动构建，构建完成后自动发布到线上。
 
 start.sh{.filename}
+
 ```shell
 #!/bin/bash
 echo ""
@@ -35,6 +36,9 @@ if [ -d "$gitPath" ]; then
                 sudo rm -rf gittemp
         fi
         echo "拉取最新的项目文件"
+        # 这里是清理脚本创建导致修改，无法pull
+        sudo git restore .
+        # 清理后开始拉取最新的项目文件
         sudo git pull
         echo "拉取结束End"
 
@@ -73,6 +77,7 @@ fi
 ```
 
 deploy.js{.filename}
+
 ```js
 const http = require('http')
 const createHandler = require('github-webhook-handler')
