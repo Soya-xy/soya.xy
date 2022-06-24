@@ -14,7 +14,7 @@
 
     <section>
       <div class="container">
-        <img src="/images/nav-floppy.png" alt="404" class="not-found-image">
+        <img src="https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-floppy.png" alt="404" class="not-found-image">
       </div>
     </section>
   </article>

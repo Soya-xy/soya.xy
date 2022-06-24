@@ -2,7 +2,7 @@
 title: New Blog
 date: 2022-05-15 19:34
 tags: ['post', 'note-taking']
-thumbnail: /images/nav-github.png
+thumbnail: https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png
 highlighted: true
 ---
 

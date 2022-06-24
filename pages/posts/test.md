@@ -4,7 +4,7 @@ date: 2022-05-15 10:06:10
 lang: en
 duration: 15min
 author: soya
-thumbnail: /images/vue.png
+thumbnail: https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/vue.png
 highlighted: true
 tags: [vue, vite, vuepress, vuepress-plugin-blog]
 ---
@@ -72,7 +72,7 @@ test style
 This is [an example](http://example.com/ "Title") inline link.
 
 
-![nuxt](/images/nuxt.png)
+![nuxt](https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nuxt.png)
 
 | 左对齐 | 右对齐 | 居中对齐 |
 | :-----| ----: | :----: |

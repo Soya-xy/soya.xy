@@ -2,7 +2,7 @@ export function useConfig() {
   const config = useState('config', () => ({
     // seo
     siteUrl: 'https://localhost',
-    siteLogo: '/images/logo.jpeg',
+    siteLogo: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/logo.jpeg',
     github: 'https://github.com/Soya-xy',
     description: '1',
     image: '1',
@@ -14,26 +14,26 @@ export function useConfig() {
     // headerMenu
     menu: [{
       label: 'Articles',
-      icon: '/images/nav-blog.png',
+      icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-blog.png',
       url: '/articles',
     }, {
       label: 'Projects',
-      icon: '/images/nav-dos.png',
+      icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-dos.png',
       url: '/projects',
     }, {
       label: 'About me',
-      icon: '/images/nav-floppy.png',
+      icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-floppy.png',
       url: '/about',
     }],
     // rightMenu
     socialMenu: [
       {
         label: 'Twitter',
-        icon: '/images/nav-twitter.png',
+        icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-twitter.png',
         url: 'https://twitter.com/SoyaXyo',
       }, {
         label: 'Github',
-        icon: '/images/nav-github.png',
+        icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png',
         url: 'https://github.com/Soya-xy',
       },
     ],

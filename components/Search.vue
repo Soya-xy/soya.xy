@@ -37,7 +37,7 @@ async function excuteSearch() {
         id="search" ref="{searchRef}" v-model="query" type="search" class="search-input"
         placeholder="Begin typing to search..."
       >
-      <img class="search-icon" src="/images/nav-search.png" alt="Search">
+      <img class="search-icon" src="https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-search.png" alt="Search">
     </div>
   </div>
 </template>

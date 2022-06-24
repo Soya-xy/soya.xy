@@ -36,7 +36,7 @@ const { data } = await useFetch<Repo[]>(`https://api.github.com/users/${config.v
           {{ project.tagline }}
         </p>
         <div class="stars">
-          <img src="/images/nav-github.png" alt="Stargazers">
+          <img src="https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png" alt="Stargazers">
           <span>
             <a v-if="data.length > 0" :href="`https://github.com/taniarascia/${project.repoName}/stargazers`">
               {{ Number(

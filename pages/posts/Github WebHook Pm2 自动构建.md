@@ -1,7 +1,7 @@
 ---
 title: Github WebHook Pm2 自动构建Nuxt3
 date: 2022-05-16 18:06:36
-thumbnail: /images/nav-github.png
+thumbnail: https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png
 tags: ['git', 'nuxt3', 'hook']
 ---
 

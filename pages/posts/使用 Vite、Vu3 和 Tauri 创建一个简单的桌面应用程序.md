@@ -1,6 +1,6 @@
 ---
 title: 使用 Vite、Vu3 和 Tauri 创建一个简单的桌面应用程序
-thumbnail: /images/tauri.png
+thumbnail: https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/tauri.png
 date: 2022-05-19 10:12:29
 tags: ['rust', 'vite', 'vue', 'tauri']
 ---

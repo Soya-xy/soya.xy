@@ -3,9 +3,9 @@ const links = [
   { url: 'https://iobiji.com/', label: 'iobiji' },
 ]
 const madeWithLinks = [
-  { url: 'https://v3.nuxtjs.org/', label: 'Next3', icon: '/images/nuxt.png' },
-  { url: 'https://vitejs.dev/', label: 'Vite', icon: '/images/vite.png' },
-  { url: 'https://github.com/Soya-xy', label: 'Github', icon: '/images/nav-github.png' },
+  { url: 'https://v3.nuxtjs.org/', label: 'Next3', icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nuxt.png' },
+  { url: 'https://vitejs.dev/', label: 'Vite', icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/vite.png' },
+  { url: 'https://github.com/Soya-xy', label: 'Github', icon: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png' },
 ]
 </script>
 

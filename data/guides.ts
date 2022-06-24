@@ -5,7 +5,7 @@ export const menuList: MenuList[] = [
     list: [
   {
     type: "post",
-    thumbnail: " /images/tauri.png",
+    thumbnail: " https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/tauri.png",
     highlight: false,
     name: "使用 Vite、Vu3 和 Tauri 创建一个简单的桌面应用程序",
     title: "使用 Vite、Vu3 和 Tauri 创建一个简单的桌面应用程序",
@@ -14,7 +14,7 @@ export const menuList: MenuList[] = [
   },
   {
     type: "post",
-    thumbnail: " /images/nav-github.png",
+    thumbnail: " https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png",
     highlight: false,
     name: "Github WebHook Pm2 自动构建",
     title: "Github WebHook Pm2 自动构建",
@@ -23,7 +23,7 @@ export const menuList: MenuList[] = [
   },
   {
     type: "post",
-    thumbnail: " /images/nav-github.png",
+    thumbnail: " https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png",
     highlight: true,
     name: "New Blog",
     title: "New Blog",
@@ -32,7 +32,7 @@ export const menuList: MenuList[] = [
   },
   {
     type: "post",
-    thumbnail: " /images/vue.png",
+    thumbnail: " https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/vue.png",
     highlight: true,
     name: "TEST",
     title: "TEST",

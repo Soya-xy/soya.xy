@@ -4,7 +4,7 @@ useHead({
   title: 'Soya',
   link: [
     {
-      rel: 'icon', type: 'image/png', href: '/images/nuxt.png',
+      rel: 'icon', type: 'image/png', href: 'https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/logo.jpeg',
     },
   ],
 })

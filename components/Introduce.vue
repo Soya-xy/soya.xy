@@ -43,11 +43,11 @@ menuList[0].list.forEach((item) => {
         </div>
         <p class="hero-buttons">
           <NuxtLink to="/about" class="hero-button">
-            <img src="/images/nav-floppy.png" alt="Me">
+            <img src="https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-floppy.png" alt="Me">
             More about me
           </NuxtLink>
           <a v-if="data" :href="config.github" target="_blank" class="hero-button" rel="noreferrer">
-            <img src="/images/nav-github.png" alt="GitHub">
+            <img src="https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/nav-github.png" alt="GitHub">
             <span class="bright">
               {{ Number(data.followers).toLocaleString() }}
             </span>
