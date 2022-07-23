@@ -5,6 +5,15 @@ export const menuList: MenuList[] = [
     list: [
   {
     type: "post",
+    thumbnail: " https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/apple.png",
+    highlight: true,
+    name: "Setting up a Mac for Development",
+    title: "Setting up a Mac for Development",
+    date: " 2022-07-23 11:17:29",
+    birthtime: "2022-07-23T03:16:46.816Z"
+  },
+  {
+    type: "post",
     thumbnail: " https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/tauri.png",
     highlight: false,
     name: "使用 Vite、Vu3 和 Tauri 创建一个简单的桌面应用程序",
