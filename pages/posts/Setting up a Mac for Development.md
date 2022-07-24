@@ -200,25 +200,25 @@ Host *
 
 ## 效率工具
 
- `Thor`  快捷键启动工具
- `自动切换输入法Lite`  不同软件配置不同输入法    
- `Keka` 压缩工具
- `Karabiner` 键盘自定义
- `Fig` 终端可视化提示
- `iTerm2` 终端
- `Termius` SSH+FPT工具
- `Lemon` Clean my mac x 替代品
- `Open VPN` VPN代理工具
- `Motrix` 下载工具
- `MenubarX` 摸鱼神器 菜单栏打开网页
- `Hide Bar` 隐藏菜单栏  [DownLoad](https://github.com/dwarvesf/hidden)
- `GIPHY CAPTURE` 视频转GIF
- `iHosts` host修改工具
- `Mounty` 挂载NFTS工具  [DownLoad](https://mounty.app/)
+- `Thor`  快捷键启动工具
+- `自动切换输入法Lite`  不同软件配置不同输入法    
+- `Keka` 压缩工具
+- `Karabiner` 键盘自定义
+- `Fig` 终端可视化提示
+- `iTerm2` 终端
+- `Termius` SSH+FPT工具
+- `Lemon` Clean my mac x 替代品
+- `Open VPN` VPN代理工具
+- `Motrix` 下载工具
+- `MenubarX` 摸鱼神器 菜单栏打开网页
+- `Hide Bar` 隐藏菜单栏  [DownLoad](https://github.com/dwarvesf/hidden)
+- `GIPHY CAPTURE` 视频转GIF
+- `iHosts` host修改工具
+- `Mounty` 挂载NFTS工具  [DownLoad](https://mounty.app/)
 
 ## 浏览器拓展
 
- `FeHelper` 前端工具箱集合
- `Go Home` 下班倒计时 (Github 搜索  go-home-vue)
- `Save All Resources` 保存所有资源，仿站用
- `Google 翻译` 翻译工具 
+- `FeHelper` 前端工具箱集合
+- `Go Home` 下班倒计时 (Github 搜索  go-home-vue)
+- `Save All Resources` 保存所有资源，仿站用
+- `Google 翻译` 翻译工具 
