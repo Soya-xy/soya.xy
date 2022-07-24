@@ -7,7 +7,7 @@ import { find, pathEq } from 'ramda'
 import type { Item } from '~/assets/type/menu'
 const { writeFileSync } = fs
 
-await fs.ensureDir('pages/posts/')
+fs.ensureDir('pages/posts/')
 
 const menu: { year: string | number; list: Item[] | string }[] = []
 

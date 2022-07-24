@@ -12,7 +12,7 @@ import { slugify } from '../scripts/slugify'
 export default defineNuxtModule({
   async setup(_, nuxt) {
     nuxt.hook('vite:extendConfig', async (config) => {
-      config.plugins.push(
+      config.plugins!.push(
         Markdown({
           wrapperComponent: 'post',
           wrapperClasses: 'container post-content',

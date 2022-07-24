@@ -1,9 +1,9 @@
-import Fuse from 'fuse.js/dist/fuse'
+import Fuse from 'fuse.js'
 import { menuList } from '~/data/guides'
 import type { Menu, SearchResult } from '~/assets/type/menu'
 
 let initParams: URLSearchParams | null = null
-if (process.client)
+if ((process as any).client)
   initParams = new URLSearchParams(location.search)
 
 export const query = ref((initParams && initParams!.get('search')?.toString()) || '')
