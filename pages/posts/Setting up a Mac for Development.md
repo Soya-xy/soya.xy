@@ -5,8 +5,6 @@ highlighted: true
 thumbnail: https://photoserver-1254285921.cos.ap-beijing.myqcloud.com/apple.png
 ---
 
-[TOC]
-
 昨天忘记备份直接升级了`13.0 Beta版(22A5295i)`导致各种软件都不能正常使用，所以我需要备份一下。
 并且可以记录一下我对我的MacBook Pro的常用软件集齐配置。
 
