@@ -15,7 +15,8 @@ const madeWithLinks = [
       <section>
         <nav>
           <span class="desktop-only">Made by Soya</span>
-          <a class="desktop-only !text-#eee" href="https://www.taniarascia.com/" target="_blank">Theme By Tania Rascia</a>
+          <a class="desktop-only !text-#eee" href="https://www.taniarascia.com/" target="_blank">Theme By Tania
+            Rascia</a>
         </nav>
         <nav>
           <span class="desktop-only">Links:</span>
@@ -25,11 +26,16 @@ const madeWithLinks = [
         </nav>
         <nav>
           <a
-            v-for="link in madeWithLinks " :key="link.url" :href="link.url" :title="link.label"
-            target="_blank" rel="noopener noreferrer"
+            v-for="link in madeWithLinks " :key="link.url" :href="link.url" :title="link.label" target="_blank"
+            rel="noopener noreferrer"
           >
             <span>{{ link.label }}</span>
             <img :src="link.icon" :alt="link.label">
+          </a>
+        </nav>
+        <nav>
+          <a href="https://beian.miit.gov.cn/" title="粤ICP备18033133号-3" target="_blank" rel="noopener noreferrer">
+            <span>粤ICP备18033133号</span>
           </a>
         </nav>
       </section>
